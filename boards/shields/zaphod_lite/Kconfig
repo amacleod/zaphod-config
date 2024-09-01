@@ -20,5 +20,4 @@ config ZAPHOD_BONGO_CAT_SLOW_LIMIT
 
 endif # ZAPHOD_BONGO_CAT
 
-
-endif
+endif # ZMK_DISPLAY
