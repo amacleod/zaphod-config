@@ -1,5 +1,5 @@
 ---
-name: zephyr-config
+name: zaphod-config
 build:
   settings:
     board_root: .
