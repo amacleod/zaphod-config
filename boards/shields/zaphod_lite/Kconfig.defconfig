@@ -12,6 +12,7 @@ config SPI
 config ZMK_DISPLAY
 	select LV_USE_CONT
 	select LV_FONT_MONTSERRAT_26
+        select LV_USE_IMG
 
 if ZMK_DISPLAY
 
