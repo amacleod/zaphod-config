@@ -97,6 +97,8 @@ void state_widget_wpm(struct zaphod_bongo_cat_widget *widget, int wpm) {
 int zaphod_bongo_cat_widget_init(struct zaphod_bongo_cat_widget *widget, lv_obj_t *parent) {
     widget->obj = lv_img_create(parent);
 
+    lv_obj_set_width(widget->obj, LV_SIZE_CONTENT);
+    lv_obj_set_height(widget->obj, LV_SIZE_CONTENT);
     state_widget_wpm(widget, 0);
 
     sys_slist_append(&widgets, &widget->node);
