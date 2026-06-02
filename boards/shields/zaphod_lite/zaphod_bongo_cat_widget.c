@@ -50,7 +50,7 @@ const void* fast_images[] = {
 
 void set_img_src(void *var, int32_t val) {
     lv_obj_t *img = (lv_obj_t *)var;
-    lv_img_set_src(img, images[val]);
+    lv_image_set_src(img, images[val]);
 }
 
 
@@ -74,7 +74,7 @@ void state_widget_wpm(struct zaphod_bongo_cat_widget *widget, int wpm) {
 	if (current_anim_state != anim_state_slow) {
 	    LOG_DBG("Set source to slow image!");
 	    lv_anim_del(widget->obj, set_img_src);
-	    lv_img_set_src(widget->obj, &slow_img);
+	    lv_image_set_src(widget->obj, &slow_img);
 	    current_anim_state = anim_state_slow;
 	}
     } else {
@@ -95,7 +95,7 @@ void state_widget_wpm(struct zaphod_bongo_cat_widget *widget, int wpm) {
 }
 
 int zaphod_bongo_cat_widget_init(struct zaphod_bongo_cat_widget *widget, lv_obj_t *parent) {
-    widget->obj = lv_img_create(parent);
+    widget->obj = lv_image_create(parent);
 
     lv_obj_set_width(widget->obj, LV_SIZE_CONTENT);
     lv_obj_set_height(widget->obj, LV_SIZE_CONTENT);
